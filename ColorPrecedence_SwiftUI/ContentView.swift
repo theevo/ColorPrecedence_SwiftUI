@@ -10,9 +10,9 @@ import SwiftUI
 struct largeTitleBlack: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(Font
-                    .largeTitle
-                    .weight(.black))
+            .font(
+                .largeTitle
+                .weight(.black))
             .foregroundColor(.blue)
     }
 }

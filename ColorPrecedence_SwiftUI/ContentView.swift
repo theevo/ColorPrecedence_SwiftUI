@@ -15,7 +15,8 @@ struct ContentView: View {
                 .fontWeight(.black)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 .padding()
-            Text("Sup")
+                .padding()
+            Text("Sup y'all")
         }
         .foregroundColor(.red)
     }

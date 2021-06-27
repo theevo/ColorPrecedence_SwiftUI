@@ -7,14 +7,28 @@
 
 import SwiftUI
 
+struct largeTitleBlack: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(Font
+                    .largeTitle
+                    .weight(.black))
+            .foregroundColor(.blue)
+    }
+}
+
+extension View {
+    func properTitle() -> some View {
+        self.modifier(largeTitleBlack())
+    }
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
             Text("Hello, world!")
-                .font(.largeTitle)
-                .fontWeight(.black)
-                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                .padding()
+                .properTitle()
+                 .padding()
                 .padding()
             Text("Sup y'all")
         }
